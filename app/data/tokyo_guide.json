@@ -1,0 +1,339 @@
+[
+    {
+      "id": "sensoji",
+      "title": "Senso-ji Temple",
+      "category": "temple",
+      "area": "Asakusa",
+      "content": "Tokyo’s oldest and most famous Buddhist temple. Features the Kaminarimon gate, a massive red lantern, and the lively Nakamise shopping street."
+    },
+    {
+      "id": "meiji_shrine",
+      "title": "Meiji Shrine",
+      "category": "shrine",
+      "area": "Harajuku",
+      "content": "Shinto shrine dedicated to Emperor Meiji and Empress Shoken. Surrounded by dense forest, perfect for peaceful walks and cultural ceremonies."
+    },
+    {
+      "id": "zojoji",
+      "title": "Zojo-ji Temple",
+      "category": "temple",
+      "area": "Shiba",
+      "content": "Located near Tokyo Tower, Zojo-ji is a historic Buddhist temple with a dramatic skyline view. Houses the graves of Tokugawa shoguns."
+    },
+    {
+      "id": "gotokuji",
+      "title": "Gotokuji Temple",
+      "category": "temple",
+      "area": "Setagaya",
+      "content": "Famous as the origin of the 'maneki-neko' (beckoning cat). A peaceful temple filled with hundreds of cat statues."
+    },
+    {
+      "id": "nezu",
+      "title": "Nezu Shrine",
+      "category": "shrine",
+      "area": "Bunkyo",
+      "content": "One of Tokyo’s oldest shrines, known for its beautiful azalea garden and long line of red torii gates."
+    },
+    {
+      "id": "tokyo_skytree",
+      "title": "Tokyo Skytree",
+      "category": "viewpoint",
+      "area": "Sumida",
+      "content": "Tallest structure in Japan. Offers 360-degree views from two observation decks. Includes a massive shopping center and aquarium."
+    },
+    {
+      "id": "shibuya_sky",
+      "title": "Shibuya Sky",
+      "category": "viewpoint",
+      "area": "Shibuya",
+      "content": "Modern rooftop observatory on top of Shibuya Scramble Square. Open-air space perfect for sunset views and photos."
+    },
+    {
+      "id": "tokyo_tower",
+      "title": "Tokyo Tower",
+      "category": "viewpoint",
+      "area": "Minato",
+      "content": "Iconic red-and-white tower inspired by the Eiffel Tower. Offers panoramic views and houses a small theme park and aquarium."
+    },
+    {
+      "id": "roppongi_hills",
+      "title": "Roppongi Hills Observation Deck",
+      "category": "viewpoint",
+      "area": "Roppongi",
+      "content": "Located in the Mori Tower. Offers city views, art exhibitions, and access to the Mori Art Museum."
+    },
+    {
+      "id": "shinjuku_gyoen",
+      "title": "Shinjuku Gyoen National Garden",
+      "category": "viewpoint",
+      "area": "Shinjuku",
+      "content": "Massive garden blending traditional Japanese, English, and French styles. Stunning in cherry blossom season."
+    },
+    {
+      "id": "asakusa",
+      "title": "Asakusa",
+      "category": "neighborhood",
+      "area": "Northeast Tokyo",
+      "content": "Old-town charm with Senso-ji Temple, rickshaws, street food, and the Sumida River. A must-visit for traditional Tokyo."
+    },
+    {
+      "id": "shibuya",
+      "title": "Shibuya",
+      "category": "neighborhood",
+      "area": "Central Tokyo",
+      "content": "Youth culture hub with fashion, nightlife, and the world-famous Shibuya Scramble Crossing."
+    },
+    {
+      "id": "harajuku",
+      "title": "Harajuku",
+      "category": "neighborhood",
+      "area": "Central Tokyo",
+      "content": "Vibrant center of street fashion and trends. Visit Takeshita Street for the full experience."
+    },
+    {
+      "id": "daikanyama",
+      "title": "Daikanyama",
+      "category": "neighborhood",
+      "area": "Shibuya",
+      "content": "Trendy neighborhood with stylish cafes, indie bookstores, and peaceful residential streets."
+    },
+    {
+      "id": "shimokitazawa",
+      "title": "Shimokitazawa",
+      "category": "neighborhood",
+      "area": "Setagaya",
+      "content": "Laid-back district popular for vintage shops, live music, and alternative culture. Great for exploring on foot."
+    },
+    {
+      "id": "kagurazaka",
+      "title": "Kagurazaka",
+      "category": "neighborhood",
+      "area": "Shinjuku",
+      "content": "Old geisha district now known for its French influence, cobbled alleys, and mix of traditional and modern restaurants."
+    },
+    {
+      "id": "cultural_tips",
+      "title": "Cultural Tips for Travelers",
+      "category": "cultural",
+      "area": "General",
+      "content": "Bow politely when greeting. Remove shoes when entering homes or traditional spaces. Don’t speak loudly on trains or in temples."
+    },
+    {
+      "id": "train_etiquette",
+      "title": "Train Etiquette in Tokyo",
+      "category": "cultural",
+      "area": "General",
+      "content": "Keep phones silent. Don’t eat or talk loudly. Priority seating is for the elderly, pregnant women, and disabled passengers."
+    },
+    {
+      "id": "onsen_etiquette",
+      "title": "Onsen Etiquette",
+      "category": "cultural",
+      "area": "General",
+      "content": "Wash thoroughly before entering the bath. Don’t bring towels into the water. Tattoos may not be allowed in some baths."
+    },
+    {
+      "id": "food_etiquette",
+      "title": "Dining Etiquette in Tokyo",
+      "category": "cultural",
+      "area": "General",
+      "content": "Slurping noodles is polite. Don’t pass food with chopsticks. Say 'Itadakimasu' before eating and 'Gochisousama' after."
+    },
+    {
+      "id": "tokyo_station",
+      "title": "Tokyo Station",
+      "category": "neighborhood",
+      "area": "Chiyoda",
+      "content": "Historic train station with red-brick facade, underground shopping malls, and access to bullet trains (Shinkansen)."
+    },
+    {
+      "id": "akihabara",
+      "title": "Akihabara",
+      "category": "neighborhood",
+      "area": "Chiyoda",
+      "content": "Electronics, anime, and gaming capital of Tokyo. Explore maid cafes, retro games, and otaku culture."
+    },
+    {
+      "id": "ginza",
+      "title": "Ginza",
+      "category": "neighborhood",
+      "area": "Chuo",
+      "content": "Luxury shopping district with flagship stores, high-end boutiques, and Michelin-starred restaurants."
+    },
+    {
+    "id": "kanda_myōjin",
+    "title": "Kanda Myōjin Shrine",
+    "category": "shrine",
+    "area": "Chiyoda",
+    "content": "An important Edo-period shrine near Akihabara, Kanda Myōjin is known for its vibrant festivals and popularity among tech workers and anime fans who come to pray for luck."
+    },
+    {
+    "id": "tennoji",
+    "title": "Tenno-ji Temple",
+    "category": "temple",
+    "area": "Yanaka",
+    "content": "A quiet, lesser-known temple in the traditional neighborhood of Yanaka. Offers a glimpse of pre-war Tokyo and peaceful cemetery grounds."
+    },
+    {
+    "id": "arakawa_yuuen",
+    "title": "Arakawa Yūen Amusement Park",
+    "category": "viewpoint",
+    "area": "Arakawa",
+    "content": "A small retro amusement park with a Ferris wheel offering charming views over the Sumida River. Great for families and nostalgic vibes."
+    },
+    {
+    "id": "hie_shrine",
+    "title": "Hie Shrine",
+    "category": "shrine",
+    "area": "Akasaka",
+    "content": "Known for its tunnel of red torii gates and annual Sanno Festival. A peaceful spiritual site in the middle of the business district."
+    },
+    {
+    "id": "sumida_park",
+    "title": "Sumida Park",
+    "category": "viewpoint",
+    "area": "Asakusa",
+    "content": "A riverside park perfect for cherry blossom season, with views of Tokyo Skytree across the Sumida River. Popular for hanami picnics."
+    },
+    {
+    "id": "rikugien",
+    "title": "Rikugien Garden",
+    "category": "viewpoint",
+    "area": "Komagome",
+    "content": "A classical Japanese landscape garden with miniature hills, bridges, and seasonal illumination events."
+    },
+    {
+    "id": "kappabashi",
+    "title": "Kappabashi Street",
+    "category": "neighborhood",
+    "area": "Taito",
+    "content": "Famous for selling everything related to cooking: knives, fake food displays, dishes, and more. A paradise for chefs and restaurant owners."
+    },
+    {
+    "id": "kagurazaka_geisha",
+    "title": "Kagurazaka Backstreets",
+    "category": "cultural",
+    "area": "Kagurazaka",
+    "content": "Explore cobbled alleys, hidden ryotei (traditional restaurants), and former geisha houses. Offers a mix of Edo-period charm and French expat culture."
+    },
+    {
+    "id": "oshino_hakkai",
+    "title": "Oshino Hakkai",
+    "category": "viewpoint",
+    "area": "Mount Fuji (day trip)",
+    "content": "A historic village with clear spring ponds and views of Mt. Fuji. Ideal for day trips from Tokyo."
+    },
+    {
+    "id": "toyosu_market",
+    "title": "Toyosu Market",
+    "category": "neighborhood",
+    "area": "Koto",
+    "content": "The new home of the famous Tsukiji fish auction. Offers sushi breakfasts, seafood experiences, and an observation deck over the trading floor."
+    },
+    {
+    "id": "teamlab_planets",
+    "title": "teamLab Planets",
+    "category": "viewpoint",
+    "area": "Toyosu",
+    "content": "Immersive digital art museum where you walk through water, mirrors, and light shows. A truly futuristic Tokyo experience."
+    },
+    {
+    "id": "ebisu_yokocho",
+    "title": "Ebisu Yokocho",
+    "category": "cultural",
+    "area": "Ebisu",
+    "content": "A maze of izakayas (Japanese pubs) with lanterns, small plates, and local drinks. Lively and authentic nightlife in tight alleyways."
+    },
+    {
+    "id": "koenji",
+    "title": "Koenji",
+    "category": "neighborhood",
+    "area": "Suginami",
+    "content": "An alternative music and punk scene hub. Packed with vintage clothing stores, underground venues, and a strong counterculture vibe."
+    },
+    {
+    "id": "tsukiji_outer",
+    "title": "Tsukiji Outer Market",
+    "category": "neighborhood",
+    "area": "Tsukiji",
+    "content": "Still home to fresh sushi, kitchen gear, street food, and wasabi root despite the auction moving to Toyosu."
+    },
+    {
+    "id": "otemachi_onsen",
+    "title": "Otemachi Onsen",
+    "category": "cultural",
+    "area": "Marunouchi",
+    "content": "Modern spa facility using natural hot spring water beneath Tokyo’s financial district. Great for a relaxing midday break."
+    },
+    {
+    "id": "meguro_river",
+    "title": "Meguro River",
+    "category": "viewpoint",
+    "area": "Nakameguro",
+    "content": "Picturesque river lined with sakura trees, boutique cafes, and perfect cherry blossom views in spring."
+    },
+    {
+    "id": "takao",
+    "title": "Mount Takao",
+    "category": "viewpoint",
+    "area": "West Tokyo",
+    "content": "Hiking destination one hour from Shinjuku. Offers forest trails, a monkey park, temples, and panoramic views of Mt. Fuji on clear days."
+    },
+    {
+    "id": "ikebukuro",
+    "title": "Ikebukuro",
+    "category": "neighborhood",
+    "area": "Toshima",
+    "content": "Lively entertainment district with Sunshine City, Pokémon Center Mega Tokyo, and one of the busiest train stations in the world."
+    },
+    {
+    "id": "komeda",
+    "title": "Komeda’s Coffee",
+    "category": "cultural",
+    "area": "Various",
+    "content": "Beloved Nagoya-origin coffee chain offering classic breakfasts, cozy booths, and the famous ‘Shiro Noir’ dessert."
+    },
+    {
+    "id": "yoyogi_park",
+    "title": "Yoyogi Park",
+    "category": "viewpoint",
+    "area": "Shibuya",
+    "content": "Large urban park near Harajuku with open lawns, fountains, and drum circle gatherings on weekends."
+    },
+    {
+    "id": "ginza_kabuki",
+    "title": "Kabukiza Theatre",
+    "category": "cultural",
+    "area": "Ginza",
+    "content": "Watch traditional Kabuki performances in a historic building. Single-act tickets available for beginners."
+    },
+    {
+    "id": "sumo_museum",
+    "title": "Sumo Museum",
+    "category": "cultural",
+    "area": "Ryogoku",
+    "content": "Located near the Ryogoku Kokugikan arena. Learn about sumo history, top-ranked wrestlers, and traditional rituals."
+    },
+    {
+    "id": "nippori",
+    "title": "Nippori Fabric Town",
+    "category": "neighborhood",
+    "area": "Arakawa",
+    "content": "A long street of shops selling textiles, buttons, and handmade crafts. Popular with designers and DIY crafters."
+    },
+    {
+    "id": "shibamata",
+    "title": "Shibamata Taishakuten",
+    "category": "temple",
+    "area": "Katsushika",
+    "content": "A nostalgic town full of Showa-era vibes. Visit the wooden Taishakuten Temple and traditional candy shops nearby."
+    },
+    {
+    "id": "tokyo_sento",
+    "title": "Public Bathhouses in Tokyo",
+    "category": "cultural",
+    "area": "Various",
+    "content": "Try local sento (public baths) like Daikokuyu or Thermae-Yu. Clean your body first, don’t wear swimsuits, and enjoy the soak!"
+    }
+  ]
+  
