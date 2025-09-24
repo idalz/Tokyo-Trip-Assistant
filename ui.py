@@ -10,7 +10,7 @@ from datetime import datetime
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="🗼 Tokyo Trip Assistant",
+    page_title="Tokyo Trip Assistant",
     page_icon="🗼",
     layout="centered"
 )
@@ -54,21 +54,29 @@ def main():
 
     # Sidebar with session info
     with st.sidebar:
-        if not IS_PRODUCTION:
-            st.header("Session Info")
-            st.text(f"Session ID: {st.session_state.session_id[:8]}...")
-
-        if st.button("🔄 New Session"):
-            st.session_state.session_id = str(uuid.uuid4())
-            st.session_state.messages = []
-            st.rerun()
+        st.markdown("### 💡 Try asking:")
+        st.markdown("- What temples are worth visiting in Tokyo?")
+        st.markdown("- Where can I listen to live music?")
+        st.markdown("- What's the weather like tomorrow?")
+        st.markdown("- Plan an ideal day exploring Shibuya!")
 
         st.markdown("---")
-        st.markdown("### 💡 Try asking:")
-        st.markdown("- What temples are in Asakusa?")
-        st.markdown("- Where can I get the best city view?")
-        st.markdown("- What's the weather like today?")
-        st.markdown("- Plan a day in Shibuya")
+        st.markdown("### 🎯 Demo Scope")
+        st.markdown("Smart travel assistant for Tokyo exploration. Get recommendations for temples, scenic viewpoints, dining, entertainment venues, cultural experiences, and weather forecasts.")
+
+        st.markdown("### ⚠️ Current Limitations")
+        st.markdown("- Weather forecasts limited to 3-day period")
+        st.markdown("- Knowledge base contains curated sample data")
+        st.markdown("- Conversation memory resets with each session")
+
+        st.markdown("### 🚀 Planned Enhancements")
+        st.markdown("- Expanded knowledge base with comprehensive Tokyo data")
+        st.markdown("- Advanced reasoning and multi-step trip planning")
+        st.markdown("- Extended coverage beyond Tokyo to major Japanese cities")
+
+        if not IS_PRODUCTION:
+            st.markdown("---")
+            st.text(f"Session ID: {st.session_state.session_id[:8]}...")
 
     # Display chat messages
     for message in st.session_state.messages:

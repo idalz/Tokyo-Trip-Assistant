@@ -217,13 +217,13 @@ tools = [
         "type": "function",
         "function": {
             "name": "get_weather_info",
-            "description": "Get current weather and forecast",
+            "description": "Get current weather and 5-day forecast for Tokyo. Returns multi-day forecast data including today, tomorrow, and up to 5 days ahead.",
             "parameters": {
                 "type": "object",
                 "properties": {
                     "location": {
                         "type": "string",
-                        "description": "Location in "
+                        "description": "Location to get weather for (defaults to Tokyo if not specified)"
                     }
                 },
                 "required": []
@@ -246,20 +246,14 @@ def smart_agent_with_tools(state: AgentState) -> AgentState:
         "small_talk": "HINT: This appears to be casual conversation - you probably won't need any tools."
     }
 
-    system_content = f"""You are a helpful Tokyo travel assistant. You have access to tools to search for travel information and get weather data.
+    system_content = f"""You are a Tokyo travel assistant. You EXCLUSIVELY provide information about Tokyo, Japan. NO OTHER CITIES ALLOWED.
 
 {intent_hints.get(intent, "")}
 
-CRITICAL RULES:
-1. For travel questions, you MUST use the search_tokyo_info tool first
-2. For weather questions, you MUST use the get_weather_info tool
-3. ONLY use information returned by the tools - do NOT add your own knowledge
-4. If tools don't return enough information, specify the response includes information from your own knowledge.
-5. ALWAYS clearly state: "Based on my tools results:" or "Based on my knowledge"
-
-Do NOT mix tool results with your general knowledge. Be transparent about your sources.
-For weather we need to provide the temperature, weather description, and forecast. Also always give the date of the weather you describe."""
-
+If user asks about ANY other location = Respond: "I can only help you with Tokyo information."
+Use your tools to find answers to the user's question.
+In case of not finding relevant informations after using your tools, specify the response includes information from your own knowledge.
+"""
     messages = [
         {
             "role": "system",
