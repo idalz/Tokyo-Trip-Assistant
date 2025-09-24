@@ -18,7 +18,7 @@ class VectorStoreLoader:
         self.pc = Pinecone(api_key=settings.PINECONE_API_KEY)
         self.openai_client = OpenAI(api_key=settings.OPENAI_API_KEY)
         self.index_name = settings.PINECONE_INDEX_NAME
-        self.dimension = 1536  # text-embedding-
+        self.dimension = 1536  # text-embedding-3-small
 
     def create_index_if_not_exists(self):
         """Create Pinecone index if it doesn't exist."""
@@ -51,7 +51,7 @@ class VectorStoreLoader:
         """Create embeddings using OpenAI."""
         try:
             response = self.openai_client.embeddings.create(
-                model="text-embedding-ada-002",
+                model="text-embedding-3-small",
                 input=texts
             )
             embeddings = [item.embedding for item in response.data]

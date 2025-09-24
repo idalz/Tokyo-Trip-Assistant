@@ -25,7 +25,7 @@ class VectorStoreSearcher:
         """Create embedding for search query using OpenAI."""
         try:
             response = self.openai_client.embeddings.create(
-                model=settings.OPENAI_EMBEDDING_MODEL,
+                model= "text-embedding-3-small",
                 input=[query]
             )
             embedding = response.data[0].embedding

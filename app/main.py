@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 
 from app.core.config import settings
 from app.core.logger import setup_logging
+from app.routes.chat import router as chat_router
 import logging
 
 # Setup logging and get module-specific logger
@@ -30,8 +31,8 @@ app = FastAPI(
     description=settings.DESCRIPTION,
     version=settings.VERSION,
     debug=settings.DEBUG,
-    docs_url="/docs" if settings.DEBUG else None,
-    redoc_url="/redoc" if settings.DEBUG else None,
+    docs_url="/docs" if settings.environment != "production" else None,
+    redoc_url="/redoc" if settings.environment != "production" else None,
     lifespan=lifespan
 )
 
@@ -42,6 +43,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include routers
+app.include_router(chat_router)
 
 @app.get("/health")
 async def health_check():
@@ -66,6 +70,12 @@ async def readiness_check():
 
 @app.get("/")
 async def root():
+    if settings.environment == "production":
+        return {
+            "service": settings.APP_NAME,
+            "status": "running"
+        }
+
     return {
         "service": settings.APP_NAME,
         "description": settings.DESCRIPTION,
@@ -75,7 +85,7 @@ async def root():
         "endpoints": {
             "health": "/health",
             "readiness": "/ready",
-            "documentation": "/docs" if settings.DEBUG else "disabled"
+            "documentation": "/docs" if settings.environment != "production" else "disabled"
         }
     }
 
