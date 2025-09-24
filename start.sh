@@ -37,7 +37,7 @@ sleep 5
 start_frontend
 
 # Monitor both processes
-while true do
+while true; do
     # Check if backend is running
     if ! kill -0 $BACKEND_PID 2>/dev/null; then
         echo "⚠️ Backend crashed, restarting..."
