@@ -1,0 +1,13 @@
+[[services]]
+name = "tokyo-trip-assistant"
+source = "."
+
+[services.variables]
+ENVIRONMENT = "production"
+PORT = "8501"
+
+[services.deploy]
+healthcheckPath = "/_stcore/health"
+healthcheckTimeout = 60
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
