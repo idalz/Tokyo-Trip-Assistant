@@ -126,14 +126,14 @@ cd Tokyo-Trip-Assistant
 
 2. **Install dependencies**
 
-Using pip:
-```bash
-pip install -e .
-```
-
-Or using uv (recommended):
+Using uv (recommended):
 ```bash
 uv sync
+```
+
+Or using pip:
+```bash
+pip install -e .
 ```
 
 3. **Set up environment variables**
@@ -145,24 +145,23 @@ cp .env.example .env
 
 Edit `.env` with your credentials:
 ```env
-# OpenAI
-OPENAI_API_KEY=your-openai-api-key
+# Environment: production or development
+ENVIRONMENT=production
 
-# Pinecone
-PINECONE_API_KEY=your-pinecone-api-key
-PINECONE_INDEX_NAME=tokyo-travel-guide
-PINECONE_NAMESPACE=tokyo
+# OpenAI API Key for LLM responses
+OPENAI_API_KEY=your_openai_api_key_here
 
-# Weather API
-OPENWEATHER_API_KEY=your-openweather-api-key
+# OpenWeather API Key for weather data
+OPENWEATHER_API_KEY=your_openweather_api_key_here
 
-# App Configuration
-ENVIRONMENT=development
-HOST=0.0.0.0
-PORT=8000
-
-# CORS (adjust for production)
-CORS_ORIGINS=http://localhost:8501,http://localhost:3000
+# Pinecone API Key for vector database
+PINECONE_API_KEY=your_pinecone_api_key_here
+# Pinecone environment/region
+PINECONE_ENVIRONMENT=
+# Pinecone index name
+PINECONE_INDEX_NAME=
+# Pinecone namespace
+PINECONE_NAMESPACE=
 ```
 
 4. **Initialize Pinecone Vector Store** (one-time setup)
@@ -243,18 +242,20 @@ tokyo-trip-assistant/
 
 ### Adding Dependencies
 
-Using pip:
+Using uv (recommended):
 ```bash
-pip install package-name
-pip freeze > requirements.txt  # if using requirements.txt
+uv add package-name
 ```
 
-Or update `pyproject.toml`:
+Or update `pyproject.toml` manually and sync:
 ```toml
 [project]
 dependencies = [
     "package-name>=1.0.0",
 ]
+```
+```bash
+uv sync
 ```
 
 ### Customizing Prompts
@@ -321,8 +322,6 @@ PINECONE_NAMESPACE=tokyo
 
 # App Configuration
 ENVIRONMENT=production
-HOST=0.0.0.0
-PORT=8501
 
 # CORS (set to your Railway frontend URL)
 CORS_ORIGINS=https://your-app.railway.app
