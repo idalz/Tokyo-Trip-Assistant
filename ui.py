@@ -17,6 +17,8 @@ st.set_page_config(
 
 # API Configuration
 import os
+from dotenv import load_dotenv
+load_dotenv()
 IS_PRODUCTION = os.getenv("ENVIRONMENT", "development").lower() == "production"
 
 # Simple API URL - backend runs on localhost:8000 in same container

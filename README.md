@@ -1,4 +1,4 @@
-# Tokyo-Trip-Assistant
+# Tokyo Trip Assistant
 A conversational bot that helps visitors explore Tokyo — temples, views, neighborhoods, and cultural tips.
 
 
@@ -146,7 +146,7 @@ Optional: Deploy to Railway, Render, or fly.io for a hosted demo
 
 🗣️ What to Say in Your Cover Letter
 
-I’ve recently built a demo that reflects the exact skills listed in your role: a Tokyo Trip Assistant — a conversational AI that helps users explore the city’s temples, skyline views, and neighborhoods using LLMs, RAG, and real-time API integrations. It's built with FastAPI, LangChain, OpenAI, and Pinecone, includes prompt templates and memory handling, and is containerized for easy deployment. I’d be happy to share it or walk you through the code.
+I've recently built a demo that reflects the exact skills listed in your role: a Tokyo Trip Assistant — a conversational AI that helps users explore the city's temples, skyline views, and neighborhoods using LLMs, RAG, and real-time API integrations. It's built with FastAPI, LangChain, OpenAI, and Pinecone, includes prompt templates and memory handling, and is containerized for easy deployment. I'd be happy to share it or walk you through the code.
 
 ⚡ Optional Extensions (Post-Demo)
 

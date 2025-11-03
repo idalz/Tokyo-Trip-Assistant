@@ -38,8 +38,8 @@ class Settings(BaseSettings):
     openweather_api_key: Optional[SecretStr] = Field(default=None, description="OpenWeather API key")
 
     # Pinecone
-    pinecone_index_name: str = Field(default="tokyo-trip-assistant", description="Pinecone index name")
-    pinecone_namespace: str = Field(default="tokyo-travel-data", description="Pinecone namespace for organizing data")
+    pinecone_index_name: str = Field(default="your-pinecone-index", description="Pinecone index name")
+    pinecone_namespace: str = Field(default="your-app-namespace", description="Pinecone namespace for organizing data")
     pinecone_environment: str = Field(default="aws-us-east-1", description="Pinecone environment")
     pinecone_cloud: str = Field(default="aws", description="Pinecone cloud provider")
     pinecone_region: str = Field(default="us-east-1", description="Pinecone region")
@@ -109,7 +109,7 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(
         env_file=".env",
-        env_file_encoding="utf-16",  # Match your .env file encoding
+        env_file_encoding="utf-8",
         case_sensitive=False,
         env_prefix="",
         validate_assignment=True,
