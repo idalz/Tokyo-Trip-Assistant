@@ -1,161 +1,396 @@
 # Tokyo Trip Assistant
-A conversational bot that helps visitors explore Tokyo — temples, views, neighborhoods, and cultural tips.
 
+> **AI-Powered Conversational Travel Guide for Tokyo**
 
-🗼 Project Title: Tokyo Trip Assistant – A Conversational AI Travel Guide
-🧠 Summary
+A modern, production-ready conversational AI application that leverages **GPT-4o-mini**, **LangGraph**, **Pinecone**, and **FastAPI** to help visitors explore Tokyo through natural dialogue. Get personalized recommendations for temples, skyline views, cultural spots, dining, entertainment, and real-time weather forecasts via **RAG** (Retrieval-Augmented Generation).
 
-Tokyo Trip Assistant is a production-ready conversational AI that helps users explore Tokyo through natural dialogue — suggesting temples, skyline views, cultural spots, and local tips, while providing real-time weather, memory of user preferences, and context-aware answers.
+**🚀 [Live Demo](https://your-railway-app.railway.app)** *(Coming soon)*
 
-It demonstrates key skills required for a Conversational AI Engineer role:
+---
 
-LLM app development (OpenAI + LangChain/LangGraph)
+## Key Features
 
-Prompt design
+✅ **Natural Conversation** - Context-aware dialogue with conversation memory
+✅ **RAG Knowledge Base** - Retrieval from embedded Tokyo travel guide (Pinecone)
+✅ **Smart Intent Classification** - Understands temples, views, food, entertainment, weather queries
+✅ **Real-time Weather** - Live weather forecasts via OpenWeather API
+✅ **Production-Ready** - FastAPI backend with CORS, health checks, structured logging
+✅ **Modern Stack** - FastAPI, Streamlit, LangGraph, Pinecone, GPT-4o-mini
 
-RAG (retrieval-augmented generation)
+---
 
-Context tracking and state handling
+## Contents
 
-External API integration
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Usage](#usage)
+- [How to Install](#how-to-install)
+- [Development](#development)
+- [Project Structure](#project-structure)
+- [Deployment](#deployment)
+- [License](#license)
 
-Production Python backend (FastAPI)
+---
 
-Reusable templates and memory modules
+## Features
 
-This project is deployable, testable, and extendable — made to simulate a real-world user-facing AI product.
+- Use the power of **OpenAI LLMs** and **LangGraph** to:
+    1. Understand user intent through natural conversation
+    2. Retrieve relevant information from a curated Tokyo knowledge base
+    3. Provide context-aware recommendations for temples, views, dining, and entertainment
+    4. Fetch real-time weather forecasts for trip planning
+- **RAG** using Pinecone Vector Store for grounded, accurate responses
+- **Conversational Memory** - Remembers context within each session
+- **Modular Prompt System** - YAML-based prompt templates for easy customization
+- **Health Monitoring** - Built-in health and readiness checks
+- Simple and user-friendly interface built with **Streamlit**
+- **Dockerized** for fast and easy deployment
 
-🎯 Goal
+---
 
-To simulate a smart, travel-savvy AI agent that visitors can interact with in real-time, asking questions such as:
+## Tech Stack
 
-“What are some temples near Asakusa?”
+### Backend
+- **FastAPI** - Modern async Python web framework
+- **LangGraph** - Advanced LLM orchestration with state management
+- **LangChain 1.0+** - LLM tooling and chains
+- **Pydantic Settings** - Configuration management
+- **Uvicorn** - ASGI server
 
-“Where can I get the best city view?”
+### AI & ML
+- **OpenAI GPT-4o-mini** - Latest, cost-effective LLM
+- **Pinecone** - Vector database for semantic search over travel knowledge
+- **LangGraph** - Stateful multi-agent orchestration
+- **tiktoken** - Token counting for context management
 
-“Can you help me plan a day in Shibuya?”
+### External APIs
+- **OpenWeather API** - Real-time weather forecasts
 
-“What’s the weather like tomorrow in Tokyo?”
+### Frontend
+- **Streamlit** - Interactive Python web UI
+- **Requests** - HTTP client for API calls
 
-It answers with context-aware, grounded, natural-sounding responses, using a mix of preloaded knowledge (via RAG) and real-time API calls.
+### DevOps & Tools
+- **Docker + Docker Compose** - Containerized deployment
+- **Railway** - Cloud deployment platform *(configured)*
+- **Python 3.13** - Latest Python version
+- **pytest** - Testing framework
 
-🔧 Core Features
-Feature	Description
-🔁 Natural conversation	Memory of previous messages for contextual replies
-📖 RAG Knowledge Base	Retrieval from embedded travel guide (Pinecone) to reduce hallucinations
-✍️ Prompt Templates	Custom prompt templates per category (views, temples, food, etc.)
-🌐 Weather Integration	Real-time weather fetched from OpenWeather API
-🛠️ Production Backend	FastAPI app with typed endpoints, Docker-ready
-📜 Reusable Prompt System	YAML/JSON configs for easy scaling and modularity
-🧠 LLM Orchestration	LangChain (or LangGraph for advanced logic)
-🧪 Unit Test & Health Check	Integration tests + /health endpoint
-🌍 Multilingual Extensibility	Future-ready for Japanese/English language support
-👥 Example Conversation
+---
 
-User: I want to see some temples.
-Bot: Sure! One of the most famous is Senso-ji in Asakusa. Would you like me to suggest nearby places too?
+## Usage
 
-User: Yes, anything with a great view?
-Bot: You’re in luck — Tokyo Skytree is nearby and offers stunning city views. For skyline photos, Shibuya Sky or Roppongi Hills are also great options.
+### Example Conversations
 
-User: What’s the weather like tomorrow?
-Bot: It’s expected to be 26°C and sunny in Tokyo. Great for a walking tour!
+**User:** "I want to see some temples."
+**Bot:** "Sure! One of the most famous is Senso-ji in Asakusa. Would you like me to suggest nearby places too?"
 
-🛠️ Tech Stack
-Layer	Tool/Tech	Purpose
-LLM Provider	OpenAI GPT-4 / GPT-3.5	Natural language understanding and generation
-Orchestration	LangChain or LangGraph	Chain logic, memory, prompt flows
-API Server	FastAPI	Production-ready Python web backend
-Vector DB	Pinecone	RAG over travel guide data
-Prompt Templates	YAML / JSON	Dynamic, modular system prompts
-External APIs	OpenWeather (real) or Google Places (mocked)	Real-time information
-Containerization	Docker + docker-compose	One-command deployment
-Testing	Pytest + healthcheck	Reliability and test coverage
-Frontend (optional)	Streamlit	For showing demo visually (if needed)
-✅ MVP Project Structure: tokyo-trip-assistant/
+**User:** "Yes, anything with a great view?"
+**Bot:** "You're in luck — Tokyo Skytree is nearby and offers stunning city views. For skyline photos, Shibuya Sky or Roppongi Hills are also great options."
+
+**User:** "What's the weather like tomorrow?"
+**Bot:** "It's expected to be 26°C and sunny in Tokyo. Great for a walking tour!"
+
+---
+
+### Screenshots *(Add your own)*
+
+- Chat interface showing temple recommendations
+
+![chat_example](screenshots/chat_example.png)
+
+- Weather query with forecast
+
+![weather](screenshots/weather.png)
+
+- Contextual follow-up questions
+
+![context](screenshots/context.png)
+
+---
+
+## How to Install
+
+### Prerequisites
+- **Python 3.13+**
+- **Docker & Docker Compose** (optional, for containerized setup)
+- API Keys: OpenAI, Pinecone, OpenWeather
+
+### Local Development Setup
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/Tokyo-Trip-Assistant.git
+cd Tokyo-Trip-Assistant
+```
+
+2. **Install dependencies**
+
+Using pip:
+```bash
+pip install -e .
+```
+
+Or using uv (recommended):
+```bash
+uv sync
+```
+
+3. **Set up environment variables**
+
+Copy the example file:
+```bash
+cp .env.example .env
+```
+
+Edit `.env` with your credentials:
+```env
+# OpenAI
+OPENAI_API_KEY=your-openai-api-key
+
+# Pinecone
+PINECONE_API_KEY=your-pinecone-api-key
+PINECONE_INDEX_NAME=tokyo-travel-guide
+PINECONE_NAMESPACE=tokyo
+
+# Weather API
+OPENWEATHER_API_KEY=your-openweather-api-key
+
+# App Configuration
+ENVIRONMENT=development
+HOST=0.0.0.0
+PORT=8000
+
+# CORS (adjust for production)
+CORS_ORIGINS=http://localhost:8501,http://localhost:3000
+```
+
+4. **Initialize Pinecone Vector Store** (one-time setup)
+```bash
+python -m app.vectorstore.loader
+```
+
+5. **Start the backend** (terminal 1)
+```bash
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+6. **Start the frontend** (terminal 2)
+```bash
+streamlit run ui.py
+```
+
+7. **Access the application**
+- **Frontend (Streamlit)**: http://localhost:8501
+- **Backend API**: http://localhost:8000
+- **API Docs**: http://localhost:8000/docs
+- **Health Check**: http://localhost:8000/health
+
+---
+
+### Docker Setup
+
+Run the entire application with a single command:
+
+```bash
+docker-compose up --build
+```
+
+This starts both the FastAPI backend and Streamlit frontend in a single container.
+
+**Access the application:**
+- **Frontend**: http://localhost:8501
+- **Backend**: http://localhost:8000
+
+---
+
+## Development
+
+### Project Structure
+
+```
 tokyo-trip-assistant/
 ├── app/
 │   ├── main.py                        # FastAPI entrypoint
-│
 │   ├── routes/
 │   │   └── chat.py                    # /chat endpoint
-│
 │   ├── chains/
-│   │   └── conversation_chain.py      # LangChain or LangGraph logic (LLM, memory, RAG)
-│
+│   │   └── conversation_chain.py      # LangGraph conversation logic
 │   ├── prompts/
 │   │   └── sightseeing.yaml           # Prompt template for travel dialogue
-│
 │   ├── vectorstore/
 │   │   ├── loader.py                  # Load and embed knowledge base
-│   │   ├── search.py                  # Search/query Pinecone
-│   │   └── # Pinecone index (cloud-hosted)
-│
+│   │   └── search.py                  # Query Pinecone
 │   ├── services/
-│   │   └── weather.py                 # Calls OpenWeather API
-│
+│   │   └── weather.py                 # OpenWeather API integration
 │   ├── data/
-│   │   └── tokyo_guide.json           # Curated travel info: temples, views, areas
-│
+│   │   └── tokyo_guide.json           # Curated travel info
+│   ├── core/
+│   │   ├── config.py                  # Settings management
+│   │   └── logger.py                  # Structured logging
 │   └── utils/
-│       └── prompt_loader.py           # Load YAML prompt templates
-│
+│       └── prompt_loader.py           # YAML prompt loader
 ├── tests/
-│   └── test_chat_flow.py              # Test the /chat endpoint (basic flow)
-│
-├── .env.template                      # Example env vars (OpenAI key, API keys)
+│   ├── test_chat_flow.py              # Integration tests
+│   └── test_health.py                 # Health check tests
+├── ui.py                              # Streamlit frontend
+├── docker-compose.yml                 # Docker orchestration
 ├── Dockerfile                         # Container config
-├── docker-compose.yml                 # Easy dev environment spin-up
-├── requirements.txt                   # Python dependencies
-└── README.md                          # Project overview, features, setup instructions
+├── pyproject.toml                     # Python dependencies
+├── start.sh                           # Container startup script
+└── README.md                          # This file
+```
 
-🧠 Breakdown by Purpose
-Folder	Why it matters
-main.py	Starts FastAPI app, registers routes
-routes/	Exposes endpoints (/chat, /health)
-chains/	Contains the LangChain or LangGraph logic (LLM, memory, RAG)
-prompts/	Reusable YAML templates to show prompt engineering
-vectorstore/	Prepares and searches Pinecone over curated knowledge
-services/	External APIs like weather or (later) maps, restaurant info
-data/	Local JSON knowledge base: temples, shrines, neighborhoods, views
-utils/	Loaders, helpers, logging
-tests/	Basic test(s) to show production mindset
-Dockerfile	Proves containerization and deployment skill
-.env.template	Makes it easy to set up secrets and config
+### Adding Dependencies
 
-✅ Skills Demonstrated (Mapped to JD)
-Job Skill	Demo Proof
-✅ Python + production backend	FastAPI, Pydantic, Docker
-✅ LLM applications	OpenAI + LangChain/LangGraph
-✅ Prompt design	Custom YAML-based templates
-✅ Conversational AI & state	LangChain memory and intent continuity
-✅ RAG	Pinecone-based travel guide retrieval
-✅ API integration	Weather + pluggable 3rd party APIs
-✅ Reusability	Modular config-driven design
-✅ Team-readiness	Clean repo structure, tests, docs
-🚀 Deployment Notes
+Using pip:
+```bash
+pip install package-name
+pip freeze > requirements.txt  # if using requirements.txt
+```
 
-Deployable locally via:
+Or update `pyproject.toml`:
+```toml
+[project]
+dependencies = [
+    "package-name>=1.0.0",
+]
+```
 
-docker-compose up --build
+### Customizing Prompts
 
+Edit the YAML prompt templates in `app/prompts/`:
 
-Environment variables set via .env
+```yaml
+# app/prompts/sightseeing.yaml
+system_prompt: |
+  You are a friendly Tokyo travel assistant.
+  Help users discover temples, views, dining, and cultural experiences.
+  Use the provided context to give accurate recommendations.
+```
 
-Optional: Deploy to Railway, Render, or fly.io for a hosted demo
+### Running Tests
 
-🗣️ What to Say in Your Cover Letter
+```bash
+# Run all tests
+pytest
 
-I've recently built a demo that reflects the exact skills listed in your role: a Tokyo Trip Assistant — a conversational AI that helps users explore the city's temples, skyline views, and neighborhoods using LLMs, RAG, and real-time API integrations. It's built with FastAPI, LangChain, OpenAI, and Pinecone, includes prompt templates and memory handling, and is containerized for easy deployment. I'd be happy to share it or walk you through the code.
+# Run with coverage
+pytest --cov=app tests/
 
-⚡ Optional Extensions (Post-Demo)
+# Run specific test file
+pytest tests/test_chat_flow.py
+```
 
-Already uses Pinecone for scalable vector search
+### Code Quality
 
-Add LangGraph instead of LangChain for node-based orchestration
+```bash
+# Format code (if using black)
+black app/ tests/
 
-Add route planner / day trip agent
+# Lint (if using ruff)
+ruff check app/
 
-Add Japanese response mode with language switch
+# Type checking (if using mypy)
+mypy app/
+```
 
-Expand knowledge base via real-time Google Places
+---
+
+## Deployment
+
+### Railway Deployment
+
+This application is configured for deployment on Railway.
+
+#### Architecture
+- **Unified Service**: Single container running both FastAPI backend and Streamlit frontend
+- **Start Command**: `bash start.sh` (manages both processes)
+
+#### Environment Variables (Set in Railway Dashboard)
+
+```env
+# API Keys
+OPENAI_API_KEY=your-openai-key
+PINECONE_API_KEY=your-pinecone-key
+OPENWEATHER_API_KEY=your-weather-key
+
+# Pinecone Configuration
+PINECONE_INDEX_NAME=tokyo-travel-guide
+PINECONE_NAMESPACE=tokyo
+
+# App Configuration
+ENVIRONMENT=production
+HOST=0.0.0.0
+PORT=8501
+
+# CORS (set to your Railway frontend URL)
+CORS_ORIGINS=https://your-app.railway.app
+```
+
+#### Deployment Steps
+
+1. **Push to GitHub**
+   ```bash
+   git add .
+   git commit -m "Deploy to Railway"
+   git push origin main
+   ```
+
+2. **Create Railway Project**
+   - Go to [Railway.app](https://railway.app)
+   - Create new project from GitHub repo
+   - Select the repository
+
+3. **Configure Service**
+   - **Start Command**: `bash start.sh`
+   - Add all environment variables (see above)
+   - Deploy!
+
+4. **Access Your Application**
+   - Railway will provide a public URL
+   - Both the Streamlit UI and FastAPI backend will be accessible
+
+---
+
+## Skills Demonstrated
+
+This project showcases skills relevant for **Conversational AI Engineer** roles:
+
+| Skill | Implementation |
+|-------|----------------|
+| **Python + Production Backend** | FastAPI with health checks, CORS, structured logging |
+| **LLM Applications** | OpenAI GPT-4o-mini integration with LangChain/LangGraph |
+| **Prompt Engineering** | Custom YAML-based prompt templates with intent classification |
+| **Conversational AI & State** | LangGraph state management with conversation memory |
+| **RAG (Retrieval-Augmented Generation)** | Pinecone vector search over curated travel knowledge |
+| **API Integration** | Real-time weather data from OpenWeather API |
+| **Modularity & Reusability** | Config-driven design, reusable components |
+| **Production Readiness** | Docker, health checks, error handling, logging |
+| **Testing** | Pytest integration and unit tests |
+
+---
+
+## Future Enhancements
+
+- [ ] **Multi-language Support** - Add Japanese language responses
+- [ ] **Advanced Planning** - Multi-day itinerary generation
+- [ ] **Google Places Integration** - Real-time restaurant and attraction data
+- [ ] **Image Support** - Show photos of recommended locations
+- [ ] **User Preferences** - Persistent user profiles and saved favorites
+- [ ] **Extended Coverage** - Support for Osaka, Kyoto, and other Japanese cities
+- [ ] **Voice Interface** - Voice input/output for hands-free exploration
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Contact
+
+**Questions or feedback?** Feel free to open an issue or reach out!
+
+Built with ❤️ for travelers exploring Tokyo.
