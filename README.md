@@ -93,22 +93,6 @@ A modern, production-ready conversational AI application that leverages **GPT-4o
 
 ---
 
-### Screenshots *(Add your own)*
-
-- Chat interface showing temple recommendations
-
-![chat_example](screenshots/chat_example.png)
-
-- Weather query with forecast
-
-![weather](screenshots/weather.png)
-
-- Contextual follow-up questions
-
-![context](screenshots/context.png)
-
----
-
 ## How to Install
 
 ### Prerequisites
